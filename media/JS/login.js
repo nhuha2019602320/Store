@@ -5,7 +5,7 @@ function register(){
     var cf_password = document.getElementById('cf_password').value;
     var usernamelogin = document.getElementById('usernamelogin').value;
 
-    if(passwordlogin === cf_password) {
+    if(passwordlogin !== cf_password) {
         // alert('ĐĂNG KÍ THÀNH CÔNG');
         localStorage.setItem(usernamelogin, passwordlogin);
     }
