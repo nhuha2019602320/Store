@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINYLSTORE</title> 
+    <link rel="stylesheet" href="media/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+  <div id="show-cart">
+    <div id="show-cart__item">
+      <table border="1" cellpadding="10" cellspacing="10" id="tablee">
+        <tr>
+          <td>Tên Sản Phẩm</td>
+          <td>Số Lượng</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="media/img/Láďa-banner_2.jpg" style="width: 100%">
+      <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+    </div>         
+    <div class="mySlides fade">         
+      <img src="media/img/Láďa-banner_2.png" style="width:100%">
+      <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+    </div>          
+    <div class="mySlides fade">
+      <img src="media/img/Láďa-banner_3.png" style="width:100%">
+      <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+    </div>         
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>         
+    </div>
+    <br>
+      
+    <div style="text-align:center" class="dot1">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <div class="container">
+        <!-- Headding -->
+        <div class="heading">
+            <!-- Gio hang -->
+
+            <div class="cart">
+              <button  style="width: 60px" id="cart" onclick="showcard()">
+                <svg width="26px" height="26px" viewBox="0 0 16 16" class="bi bi-cart-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    <path fill-rule="evenodd" d="M11.354 5.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                  </svg> 
+              </button>
+            </div>
+            <span id="totalCardProduct" class="value">0</span>
+            <!-- login -->
+            <div class="login">
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+          
+                <div id="id01" class="modal" >
+                  
+                  <form class="modal-content animate">
+                    <div class="imgcontainer">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    </div>
+                
+                    <div class="loginContainer">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" id="usernamelogin" required>
+                
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" id="passwordlogin" required>
+                      <input type="password" placeholder="Confirm password" id="cf_password">
+                        
+                      <button type="button" class="loginbtn" onclick="back_home()">Login</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                    </div>
+                    <div class="register">
+                      <button class="btn_des" onclick="register()" >Đăng kí</button>
+                    </div>  
+                
+                    <div class="loginContainer" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                      <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+        </div>
+        <!-- End Headding ? -->
+        <!-- <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="./media/img/Láďa-banner_2.jpg" style="width: 100%">
+            <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+          </div>         
+          <div class="mySlides fade">         
+            <img src="./media/img/Láďa-banner_2.png" style="width:100%">
+            <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+          </div>          
+          <div class="mySlides fade">
+            <img src="./media/img/Láďa-banner_3.png" style="width:100%">
+            <div class="text">VÍTEJTE NA NAŠEM GRAMOWEBU</div>
+          </div>         
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>         
+          </div> -->
+          <!-- <br>
+      
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div> -->
+              <div id="menu">
+            <ul>
+              <li><a href="#">Trang chủ</a></li>
+              <li><a href="#">Diễn đàn</a></li>
+              <li><a href="#">Tin tức</a>
+                <!-- <ul class="sub-menu">
+                  <li><a href="#">WordPress</a></li>
+                  <li><a href="#"><a href="https://thachpham.com/category/seo" data-wpel-link="internal">SEO</a></a></li>
+                  <li><a href="#"><a href="https://azdigi.com/ssd-hosting/linux-pro/" data-wpel-link="exclude">Hosting</a></a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">Hỏi đáp</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg>
+              </a></li>
+              
+            </ul>
+          </div>
+          
+          
+        <!-- eend Slideshow  -->
+        <div class="maincontent">
+          <!-- sidebar -->
+          <div class="sidebar">
+            <div class="sidebarMenu">
+              <button class="showAll">Show all</button>
+              <h2>
+                <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                </svg> -->
+                Thể loại</h2>
+              <ul>
+                <li><a class="sidebarMenuKind">Bolero</a>
+                  <span>15</span>
+                </li>
+                <li><a class="sidebarMenuKind">383</a>
+                  <span>5</span>
+                </li>
+                <li><a class="sidebarMenuKind">Jazz</a>
+                  <span>2</span>
+                </li>
+                <li><a class="sidebarMenuKind">Blues</a>
+                  <span>2</span>
+                </li>
+
+              </ul>
+              <h2>
+                <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                </svg> -->
+                Catalory</h2>
+              <ul>
+                <li><a class="sidebarMenucaretory">New LP</a>
+                  <span>10</span>
+                </li>
+                <li><a class="sidebarMenucaretory">New 100%</a>
+                  <span>10</span>
+                </li>
+                <li><a class="sidebarMenucaretory">Old 90s</a>
+                  <span>4</span>
+                </li>
+              </ul>
+              
+              <h2>
+                <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                </svg> -->
+                Rotation</h2>
+              <ul>
+                <li><a class="sidebarMenurot">33</a>
+                  <span>12</span>
+                </li>
+                <li><a class="sidebarMenurot">45</a>
+                  <span>5</span>
+                </li>
+                <li><a class="sidebarMenurot">78</a>
+                  <span>7</span>
+                </li>
+              </ul>
+            <div class="sort">
+              <h2 style="font-family: 'Roboto', sans-serif;">SORT BY</h2>
+              <select name="sortbyprice" id="sortbyprice">
+                <option value="hight_to_low">Hight to low</option>
+                <option value="low_to_hight">Low to hight</option>
+              </select>
+            </div>
+
+            </div>
+        
+            <div id="showList" class="showList">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quis odit aspernatur numquam est maiores magnam tenetur nobis fuga nihil sunt praesentium neque ducimus, alias perferendis culpa voluptates in a.</div>
+            <div class="showview"></div>
+            
+          </div>
+        </div>
+        
+
+    </div>
+   
+    </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6 style="color: saddlebrown;">About</h6>
+            <p class="text-justify">Đĩa than<i>là một hình thức đồng bộ tín hiệu âm thanh vào lưu trữ dạng đĩa chất liệu Polyvinyl clorua và được ghi theo từng rãnh với độ dập nổi khác nhau. Các đường rãnh được đọc từ vòng lớn nhất cho tới tâm của chiếc đĩa.</i></p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="color: saddlebrown;">THÔNG TIN</h6>
+            <ul class="footer-links">
+              <li><a href="#">Giới thiệu</a></li>
+              <li><a href="#">Liên Hệ</a></li>
+              <li><a href="#">Thông tin web</a></li>
+              <li><a href="#">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Android</a></li>
+              <li><a href="#">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="color: saddlebrown;">HỖ TRỢ</h6>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Contribute</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Địa chỉ &copy; 22C-Thành Công, Hà Nội 
+         <a href="#">Desgin by ADAMSTORE</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+    </div>
+    <script src="media/JS/data.js"></script>
+    <script src="media/JS/view.js"></script>
+    <script src="media/JS/control.js"></script>
+    <script src="media/JS/login.js"></script>
+
+</body>
+</html>
