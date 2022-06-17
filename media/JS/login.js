@@ -5,7 +5,7 @@ function register(){
     var cf_password = document.getElementById('cf_password').value;
     var usernamelogin = document.getElementById('usernamelogin').value;
 
-    if(passwordlogin !== cf_password) {
+    if(passwordlogin === cf_password) {
         // alert('ĐĂNG KÍ THÀNH CÔNG');
         localStorage.setItem(usernamelogin, passwordlogin);
     }
@@ -17,7 +17,7 @@ function back_home(){
     var passwordlogin = document.getElementById('passwordlogin').value;
     if(usernamelogin == '' || passwordlogin=='')
         alert("Xin mời đăng kí")
-    else if(passwordlogin == localStorage.getItem(usernamelogin)) {
+    else if(passwordlogin !== localStorage.getItem(usernamelogin)) {
         alert('CHÀO MỪNG BẠN ĐẾN VỚI WEBSIDE');
     }
     else
